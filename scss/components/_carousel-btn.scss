@@ -1,0 +1,38 @@
+.carousel-button {
+  display: none;
+
+  @media screen and (min-width: $bp-desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--color-brand-dark);
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  &:hover {
+    @media screen and (min-width: $bp-desktop) {
+      background-color: var(--color-brand-light);
+      border-color: var(--color-brand-light);
+    }
+  }
+
+  &__icon {
+    fill: var(--color-brand-dark);
+    transition: fill 0.2s ease;
+  }
+
+  &:hover &__icon {
+    @media screen and (min-width: $bp-desktop) {
+      fill: var(--color-primary-light);
+    }
+  }
+
+  &--left {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,84 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 28, 68, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  padding: 20px;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 720px;
+  max-height: 680px;
+  background-color: var(--color-brand-dark);
+  background-image: url('../images/modal-baground.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 32px;
+  padding: 42px;
+  text-align: center;
+
+  &__close {
+    position: absolute;
+    top: 42px;
+    right: 42px;
+    background: transparent;
+    border: none;
+    width: 16px;
+    height: 8px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__close-icon {
+    fill: transparent;
+    stroke: var(--color-primary-light);
+    transition: stroke 0.2s ease;
+
+    .modal__close:hover & {
+      stroke: var(--color-brand-light);
+    }
+  }
+
+  &__title {
+    font-family: 'Play';
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--color-primary-light);
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    color: var(--color-primary-light);
+    margin-bottom: 32px;
+  }
+
+  &__highlight {
+    color: var(--color-brand-light);
+  }
+
+  &__terms {
+    margin-top: -16px;
+  }
+}

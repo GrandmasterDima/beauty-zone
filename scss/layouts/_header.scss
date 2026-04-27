@@ -1,0 +1,87 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: transparent;
+  backdrop-filter: none;
+
+  @media screen and (min-width: $bp-desktop) {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    margin: 0;
+  }
+
+  &__menu {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 56px;
+      align-items: flex-start;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__link {
+    color: var(--color-brand-dark);
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 1.2;
+    transition: color 0.2s ease, font-weight 0.2s ease;
+
+    &:hover {
+      color: var(--color-brand-light);
+      font-weight: 700;
+    }
+  }
+
+  &__socials {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__burger {
+    display: block;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__burger-icon {
+    fill: var(--color-primary-light);
+    stroke: var(--color-primary-light);
+  }
+
+  &__icon {
+    fill: var(--color-brand-dark);
+    transition: fill 0.2s ease;
+
+    &:hover {
+      fill: var(--color-brand-light);
+      cursor: pointer;
+    }
+  }
+}

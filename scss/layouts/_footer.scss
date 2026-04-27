@@ -1,0 +1,146 @@
+.footer {
+  position: relative;
+  background-color: var(--color-brand-dark);
+  background-image: url(../images/footer-baground.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 56px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 280px;
+    height: 212px;
+    background-image: url(../images/footer-bottles.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 186px;
+      text-align: left;
+    }
+  }
+  &__logo {
+    margin-bottom: 26px;
+
+    @media screen and (min-width: $bp-desktop) {
+      margin-bottom: 0;
+    }
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    @media screen and (min-width: $bp-desktop) {
+      align-items: flex-start;
+    }
+  }
+
+  &__link {
+    color: var(--color-primary-light);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease, font-weight 0.2s ease;
+
+    &:hover {
+      color: var(--color-brand-light);
+      font-weight: 600;
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    font-style: normal;
+
+    @media screen and (min-width: $bp-desktop) {
+      align-items: flex-start;
+    }
+  }
+
+  &__contacts {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__address-link {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--color-primary-light);
+    white-space: nowrap;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color-brand-light);
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+
+    @media screen and (min-width: $bp-desktop) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__icon {
+    fill: var(--color-primary-light);
+    transition: fill 0.2s ease;
+
+    &:hover {
+      fill: var(--color-brand-light);
+      cursor: pointer;
+    }
+  }
+
+  &__legal {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__copyright {
+    font-size: 13px;
+    color: var(--color-secondary-light-gray);
+    margin: 0;
+  }
+}

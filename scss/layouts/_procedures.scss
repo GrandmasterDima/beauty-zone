@@ -1,0 +1,60 @@
+.procedures {
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 64px;
+      margin-bottom: 48px;
+      font-family: 'Play';
+      line-height: 1.16;
+    }
+  }
+
+  &__highlight {
+    color: var(--color-brand-light);
+  }
+
+  &__slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 32px;
+    }
+  }
+
+  .swiper-container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    @media screen and (min-width: $bp-desktop) {
+      overflow: visible;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 32px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    height: auto;
+  }
+}

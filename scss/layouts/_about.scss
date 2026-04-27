@@ -1,0 +1,190 @@
+.about {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      right: 16px;
+      bottom: -40px;
+      transform: rotate(-30deg);
+      background-image: url(../images/star-dark.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      animation: spin-and-pulse-dark 4s ease-in-out infinite;
+
+      @media screen and (min-width: $bp-desktop) {
+        width: 64px;
+        height: 64px;
+        right: 0;
+        left: 810px;
+        bottom: 40%;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 40px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: none;
+
+      @media screen and (min-width: $bp-desktop) {
+        display: block;
+        top: 0;
+        right: -50px;
+        width: 40px;
+        height: 40px;
+        transform: rotate(30deg);
+        background-image: url('../images/star-light.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        pointer-events: none;
+        animation: spin-and-pulse-light 3s ease-in-out infinite;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 0;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-family: 'Play';
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.16;
+    }
+  }
+
+  &__highlight {
+    color: var(--color-brand-light);
+  }
+
+  &__text {
+    font-size: 18px;
+    margin-bottom: 0;
+    max-width: 320px;
+    br {
+      display: none;
+
+      @media screen and (min-width: $bp-desktop) {
+        display: inline;
+      }
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 22px;
+      line-height: 1.72;
+      max-width: 710px;
+    }
+  }
+
+  &__accent {
+    font-weight: 600;
+  }
+
+  &__photos {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      position: relative;
+      display: flex;
+      gap: 40px;
+      flex-direction: column;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: none;
+
+      @media screen and (min-width: $bp-desktop) {
+        display: block;
+        bottom: 404px;
+        left: 446px;
+        width: 16px;
+        height: 16px;
+        background-image: url(../images/star-grey.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        pointer-events: none;
+        animation: spin-and-pulse-grey 6s infinite;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: 50%;
+
+    &:first-child {
+      align-self: flex-start;
+    }
+
+    &:last-child {
+      align-self: flex-end;
+    }
+  }
+}
+
+@keyframes spin-and-pulse-dark {
+  0% {
+    transform: rotate(-30deg) scale(1);
+  }
+  50% {
+    transform: rotate(-10deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(-30deg) scale(1);
+  }
+}
+
+@keyframes spin-and-pulse-light {
+  0% {
+    transform: rotate(30deg) scale(1);
+  }
+  50% {
+    transform: rotate(50deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(30deg) scale(1);
+  }
+}
+
+@keyframes spin-and-pulse-grey {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}

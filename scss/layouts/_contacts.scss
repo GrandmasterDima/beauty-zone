@@ -1,0 +1,97 @@
+.contacts {
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+
+    @media screen and (min-width: $bp-desktop) {
+      font-family: 'Play';
+      font-size: 64px;
+      margin-bottom: 48px;
+    }
+  }
+
+  &__highlight {
+    color: var(--color-brand-light);
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 32px;
+    }
+  }
+
+  &__map {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+    order: 2;
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 0;
+      border: none;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      margin: 0;
+      width: 100%;
+      max-width: 600px;
+      order: 1;
+      iframe {
+        border-radius: 32px;
+        height: 480px;
+      }
+    }
+  }
+
+  &__form-wrapper {
+    background-color: var(--color-brand-dark);
+    background-image: url('../images/modal-baground.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 32px;
+    padding: 32px 16px;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+
+    @media screen and (min-width: $bp-desktop) {
+      padding: 48px;
+      order: 2;
+    }
+  }
+  &__form-title {
+    color: var(--color-primary-light);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 22px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__form {
+    gap: 16px;
+  }
+
+  &__terms {
+    margin-top: -8px;
+  }
+}
